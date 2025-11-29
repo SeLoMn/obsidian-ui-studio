@@ -1,0 +1,34 @@
+{
+  "name": "obsidian-ui-studio",
+  "version": "1.0.0",
+  "description": "Obsidian UI Studio provides a full front-end component builder inside Obsidian. Create HTML/CSS/JS widgets using SCSS, Stylus, Pug, and Babel, then compile and embed them directly into Canvas with one click. Build interactive UI elements without leaving your vault.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SeLoMn/obsidian-ui-studio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SeLoMn/obsidian-ui-studio/issues"
+  },
+  "homepage": "https://github.com/SeLoMn/obsidian-ui-studio#readme",
+  "devDependencies": {
+    "@babel/core": "^7.28.5",
+    "@babel/preset-env": "^7.28.5",
+    "@rollup/plugin-babel": "^6.1.0",
+    "obsidian": "^1.10.3",
+    "pug": "^3.0.3",
+    "sass": "^1.94.2",
+    "stylus": "^0.64.0",
+    "typescript": "^5.9.3",
+    "vite": "^7.2.4"
+  }
+}
