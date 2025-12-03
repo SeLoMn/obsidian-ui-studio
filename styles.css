@@ -1,0 +1,155 @@
+.obsidian-ui-studio-container {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+    background-color: var(--background-primary);
+    overflow: hidden;
+}
+
+.studio-editor-area {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 3;
+    height: 100%;
+    border-right: 1px solid var(--background-modifier-border);
+}
+
+.studio-tab-header {
+    display: flex;
+    border-bottom: 1px solid var(--background-modifier-border);
+    padding: 0;
+    background-color: var(--background-primary-alt);
+}
+
+.studio-tab-button {
+    background-color: var(--background-primary-alt);
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--text-muted);
+    transition: color 0.2s, background-color 0.2s;
+    border-right: 1px solid var(--background-modifier-border);
+}
+
+.studio-tab-button:hover:not(.active) {
+    background-color: var(--background-modifier-hover);
+}
+
+.studio-tab-button.active {
+    color: var(--text-normal);
+    background-color: var(--background-primary);
+    border-bottom: 2px solid var(--interactive-accent);
+    margin-bottom: -1px;
+}
+
+.studio-tab-content {
+    flex-grow: 1;
+    position: relative;
+    padding: 10px;
+    background-color: var(--background-primary);
+}
+
+.studio-tab-panel {
+    position: absolute;
+    top: 10px;
+    bottom: 10px;
+    left: 10px;
+    right: 10px;
+    display: none;
+    flex-direction: column;
+}
+
+.studio-tab-panel.active {
+    display: flex;
+}
+
+.studio-tab-panel .CodeMirror {
+    flex-grow: 1;
+    height: 100%;
+    min-height: 0;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+}
+
+.CodeMirror-cursors {
+    visibility: visible !important;
+    opacity: 1 !important;
+}
+
+.CodeMirror-wrap {
+    pointer-events: auto !important;
+}
+
+.CodeMirror-code {
+    opacity: 1 !important;
+}
+
+.studio-preview-area {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 2;
+    height: 100%;
+    padding: 10px;
+}
+
+.studio-preview-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid var(--background-modifier-border);
+}
+
+.studio-preview-controls h4 {
+    margin: 0;
+    padding: 5px 0;
+    color: var(--text-normal);
+    font-size: 14px;
+}
+
+.studio-name-input {
+    flex-grow: 1;
+    margin: 0 10px;
+    padding: 5px;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    background-color: var(--background-primary-alt);
+    color: var(--text-normal);
+}
+
+.studio-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.studio-reload-button, .studio-save-button {
+    background-color: var(--interactive-accent);
+    color: var(--text-on-accent);
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.studio-reload-button:hover, .studio-save-button:hover {
+    background-color: var(--interactive-accent-hover);
+}
+
+.studio-preview-output-wrapper {
+    flex-grow: 1;
+    border: 1px solid var(--background-modifier-border);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.studio-preview-iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    background-color: var(--background-secondary); 
+}

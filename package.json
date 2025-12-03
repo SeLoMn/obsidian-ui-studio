@@ -2,11 +2,19 @@
   "name": "obsidian-ui-studio",
   "version": "1.0.0",
   "description": "Obsidian UI Studio provides a full front-end component builder inside Obsidian. Create HTML/CSS/JS widgets using SCSS, Stylus, Pug, and Babel, then compile and embed them directly into Canvas with one click. Build interactive UI elements without leaving your vault.",
-  "main": "index.js",
+  "main": "main.js",
   "directories": {
     "doc": "docs"
   },
+  "config": {
+    "vault_plugin_path": "C:/vx/.obsidian/plugins/obsidian-ui-studio"
+  },
   "scripts": {
+    "clean-files": "if exist main.js del main.js & if exist componentStudioView.js del componentStudioView.js & del dist\\*.js",
+    "clean-dir": "if exist dist rd /s /q dist",
+    "clean": "npm run clean-files && npm run clean-dir",
+    "build": "npm run clean && rollup -c && npm run deploy-to-vault",
+    "deploy-to-vault": "copy main.js \"%npm_package_config_vault_plugin_path%\" /Y & copy styles.css \"%npm_package_config_vault_plugin_path%\" /Y & copy manifest.json \"%npm_package_config_vault_plugin_path%\" /Y",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -21,13 +29,20 @@
   },
   "homepage": "https://github.com/SeLoMn/obsidian-ui-studio#readme",
   "devDependencies": {
+    "@babel/cli": "^7.28.3",
     "@babel/core": "^7.28.5",
     "@babel/preset-env": "^7.28.5",
     "@rollup/plugin-babel": "^6.1.0",
+    "@rollup/plugin-commonjs": "^29.0.0",
+    "@rollup/plugin-node-resolve": "^16.0.3",
+    "@rollup/plugin-typescript": "^12.3.0",
+    "codemirror": "^6.0.2",
     "obsidian": "^1.10.3",
     "pug": "^3.0.3",
+    "rollup": "^4.53.3",
     "sass": "^1.94.2",
     "stylus": "^0.64.0",
+    "tslib": "^2.8.1",
     "typescript": "^5.9.3",
     "vite": "^7.2.4"
   }

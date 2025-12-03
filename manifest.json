@@ -1,0 +1,12 @@
+{
+  "id": "obsidian-ui-studio",
+  "name": "Obsidian UI Studio",
+  "version": "0.1.0",
+  "minAppVersion": "1.15.0",
+  "description": "A front-end component builder for Obsidian Canvas, supporting HTML, CSS, JS, SCSS, Stylus, and Pug.",
+  "author": "Your Name",
+  "authorUrl": "https://github.com/SeLoMn",
+  "isDesktopOnly": false,
+  "main": "main.js",
+  "css": "styles.css"
+}
